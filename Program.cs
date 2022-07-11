@@ -1,24 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text.Json;
-using System.Linq;
+﻿using System.Linq;
 using System.Net;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-
-using System.Configuration;
 using System.Data;
-using System.Data.SqlClient;
-using Microsoft.IdentityModel.Protocols;
-using System.ComponentModel;
 using System.IO;
 
 namespace Books
 {
-    internal class Program
+    public class Program
     {
 
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
 
             WebClient client = new WebClient();
@@ -80,7 +70,6 @@ namespace Books
                               .OrderBy(group => group.Books.First().parent_name);
 
             using (StreamWriter writetext = new StreamWriter("c:\\NENAD\\result.txt"))
-            //using (StreamWriter writetext = File.AppendText("c:\\NENAD\\result.txt"))
             {
 
                 foreach (var group in query)

@@ -2,6 +2,7 @@
 using System.Net;
 using System.Data;
 using System.IO;
+using System;
 
 namespace Books
 {
@@ -17,6 +18,8 @@ namespace Books
             Root dobj = Newtonsoft.Json.JsonConvert.DeserializeObject<Root>(strPageCode);
 
             //Console.WriteLine(dobj.books.Count);
+
+            //Console.Write(typeof(string).Assembly.ImageRuntimeVersion);
 
             for (int i = 0; i < dobj.books.Count; i++)
             {
